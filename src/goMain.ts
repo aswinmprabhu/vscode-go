@@ -57,6 +57,7 @@ import { setGlobalState } from './stateUtils';
 import { ProvideTypeDefinitionSignature } from 'vscode-languageclient/lib/typeDefinition';
 import { ProvideImplementationSignature } from 'vscode-languageclient/lib/implementation';
 import { GoRefactorProvider } from './goRefactor';
+import { descCursor } from './goDescribe';
 
 export let buildDiagnosticCollection: vscode.DiagnosticCollection;
 export let lintDiagnosticCollection: vscode.DiagnosticCollection;
@@ -354,6 +355,9 @@ export function activate(ctx: vscode.ExtensionContext): void {
 
 	ctx.subscriptions.push(vscode.commands.registerCommand('go.impl.cursor', () => {
 		implCursor();
+	}));
+	ctx.subscriptions.push(vscode.commands.registerCommand('go.guru.describe', () => {
+		descCursor();
 	}));
 	ctx.subscriptions.push(vscode.commands.registerCommand('go.godoctor.extract', () => {
 		extractFunction();

@@ -229,6 +229,11 @@
         "description": "Fill a struct literal with default values"
       },
       {
+        "command": "go.guru.describe",
+        "title": "Go: Guru Describe",
+        "description": "Describe the syntax at the cursor"
+      },
+      {
         "command": "go.show.commands",
         "title": "Go: Show All Commands...",
         "description": "Shows all commands from the Go extension in the quick pick"
